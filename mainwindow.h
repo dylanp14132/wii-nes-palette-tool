@@ -19,8 +19,13 @@ public:
 
 private slots:
     void on_fileSelectButton_clicked();
+    void on_fileText_editingFinished();
+    void on_patchButton_clicked();
+    void on_paletteList_currentIndexChanged(int index);
 
 private:
     Ui::MainWindow *ui;
+    QString filePath;
+    QByteArray replacement;
 };
 #endif // MAINWINDOW_H
