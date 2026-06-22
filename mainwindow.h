@@ -21,7 +21,7 @@ private slots:
     void on_fileSelectButton_clicked();
     void on_fileText_editingFinished();
     void on_patchButton_clicked();
-    void on_paletteList_currentIndexChanged(int index);
+    void on_paletteList_currentTextChanged(const QString &arg1);
 
 private:
     Ui::MainWindow *ui;

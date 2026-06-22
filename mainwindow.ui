@@ -76,7 +76,7 @@
     </property>
     <item>
      <property name="text">
-      <string>Nestopia Emulator's YUV (recommended)</string>
+      <string>Nestopia Emulator's YUV</string>
      </property>
     </item>
     <item>
@@ -86,7 +86,67 @@
     </item>
     <item>
      <property name="text">
+      <string>FireBrandX's FBX Composite Direct</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Wavebeam</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Wavebeam (Alternative Version)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>FCEUX NES Emulator's colorful NES</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
       <string>Original NES Wii VC</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Restored NES Wii VC</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Animal Crossing (GameCube) NES Emulator</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Nintendo 3DS Virtual Console without dark enabled</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>NES Classic Mini</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>NES Remix U game series (Wii U) NES</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Original Mega Man NES</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Rockman 9 Modern NES</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Mega Man Legacy Collection (Nintendo 3DS) Modern NES</string>
      </property>
     </item>
    </widget>
@@ -184,25 +244,6 @@
     </property>
     <property name="text">
      <string>Patch</string>
-    </property>
-   </widget>
-   <widget class="QProgressBar" name="progressBar">
-    <property name="enabled">
-     <bool>false</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>110</x>
-      <y>340</y>
-      <width>521</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="value">
-     <number>0</number>
-    </property>
-    <property name="textVisible">
-     <bool>true</bool>
     </property>
    </widget>
   </widget>
