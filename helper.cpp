@@ -1,6 +1,6 @@
 #include "helper.h"
 
-int Helper::getPalettePos (QByteArray& data) {
+int Helper::getPalettePos (const QByteArray &data) {
     int pos = data.indexOf(QByteArray::fromHex(HEX1.data()));
 
     if (pos == -1)
