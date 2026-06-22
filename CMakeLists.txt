@@ -11,6 +11,8 @@ qt_add_executable(wii-nes-palette-tool
     mainwindow.cpp
     mainwindow.h
     mainwindow.ui
+    helper.h
+    helper.cpp
 )
 
 target_link_libraries(wii-nes-palette-tool

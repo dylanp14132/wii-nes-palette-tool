@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "helper.h"
 #include <QFileDialog>
 #include <QDebug>
 #include <QMessageBox>
@@ -45,9 +46,6 @@ void MainWindow::on_fileText_editingFinished()
 
 void MainWindow::on_patchButton_clicked()
 {
-    const QByteArray search1 = QByteArray::fromHex("00600000426F6D426C69737300000000425921C80D5341540000000000000000");
-    const QByteArray search2 = QByteArray::fromHex("BA7F0000426F6D426C69737300000000425921C80D5341540000000000000000");
-
     if (filePath.isEmpty())
     {
         QMessageBox::critical(this, "Error", "Please specify a file path.");
@@ -63,13 +61,12 @@ void MainWindow::on_patchButton_clicked()
     }
 
     QByteArray data = file.readAll();
-    file.close();
-
-    int pos = data.indexOf(search1);
+    int pos = Helper::getPalettePos(data);
+    file.close();   
 
     if (pos != -1)
     {
-        data.replace(pos + search1.size(), 128, replacement);
+        data.replace(pos, 128, replacement);
 
         if (!file.open(QIODevice::WriteOnly))
             return;
@@ -77,21 +74,6 @@ void MainWindow::on_patchButton_clicked()
         file.close();
 
         QMessageBox::information(this, "Success!", "WAD file successfully changed.");
-
-        return;
-    }
-
-    pos = data.indexOf(search2);
-
-    if (pos != -1)
-    {
-        data.replace(pos + search1.size(), 128, replacement);
-        if (!file.open(QIODevice::WriteOnly))
-            return;
-        file.write(data);
-        file.close();
-
-        QMessageBox::information(this, "Success!", "Color palette successfully changed.");
 
         return;
     }
