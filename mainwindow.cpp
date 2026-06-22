@@ -50,7 +50,7 @@ void MainWindow::on_patchButton_clicked()
 
     if (filePath.isEmpty())
     {
-        QMessageBox::information(this, "Error", "Please specify a file path.");
+        QMessageBox::critical(this, "Error", "Please specify a file path.");
         return;
     }
 
@@ -58,7 +58,7 @@ void MainWindow::on_patchButton_clicked()
 
     if (!file.open(QIODevice::ReadOnly))
     {
-        QMessageBox::information(this, "Error", "Failed to open file.");
+        QMessageBox::critical(this, "Error", "Failed to open file.");
         return;
     }
 
@@ -96,7 +96,7 @@ void MainWindow::on_patchButton_clicked()
         return;
     }
 
-    QMessageBox::information(this, "Error", "Failed to change the color palette.");
+    QMessageBox::critical(this, "Error", "Failed to change the color palette.");
 }
 
 
