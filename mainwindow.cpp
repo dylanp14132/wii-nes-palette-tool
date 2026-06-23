@@ -24,7 +24,7 @@ void MainWindow::on_fileSelectButton_clicked()
         this,
         "Select a File",
         "",
-        "Extracted WAD Files (*.app *.txt)"
+        "Extracted WAD Files (*.app);;All Files (*.*)"
         );
 
     if (fileName.isEmpty())
@@ -75,12 +75,12 @@ void MainWindow::on_patchButton_clicked()
         file.write(data);
         file.close();
 
-        QMessageBox::information(this, "Success!", "WAD file successfully changed.");
+        QMessageBox::information(this, "Success!", "New color palette applied.");
 
         return;
     }
 
-    QMessageBox::critical(this, "Error", "Failed to change the color palette.");
+    QMessageBox::critical(this, "Error", "Failed to apply new color palette.");
 }
 
 void MainWindow::on_paletteList_currentTextChanged(const QString &arg1)
