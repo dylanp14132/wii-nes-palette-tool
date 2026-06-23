@@ -27,6 +27,24 @@ public:
         {"Rockman 9 Modern NES", QByteArray::fromHex("B9CE80159071A013C40ED402D000BC20A0A08100814080E28CEB800080008000DEF781DD90FDC01EDC17F00BECA0E521C5C0824082A082478211800080008000FFFF9EFFAE5FD23FF9FFFDD6FDCCFE67FAE7C342A769AFF39EFFA94A80008000FFFFD79FE35FEB3FFF1FFF1BFEF6FF75FF94F3F4D7D7DBF9CFFECE7380008000")},
         {"Mega Man Legacy Collection (Nintendo 3DS) Modern NES", QByteArray::fromHex("B5AD80B184359C15B010B405B400A86094C08500812080E480CB800088428842DEF7855A94BFB8BFD47AE090DCC4D140B9C092208A6082488214884288428842FFFFB6FFCE7FE25FF1DFFD9AFE2EFEC6F340D384B3A69BB2B6FFB5AD88428842FFFFE79FEF7FF75FFF3FFF5EFF9BFB97FBB6F7F7EBF8DFDAE3DFDEF788428842")}
     };
+
+    static inline const QHash<QString, QString> images = {
+        {"Nestopia Emulator's YUV", ":/images/nestopia_yuv.png"},
+        {"Nestopia Emulator's RGB", ":/images/nestopia_rgb.png"},
+        {"FireBrandX's FBX Composite Direct", ":/images/composite_direct.png"},
+        {"Wavebeam", ":/images/wavebeam_1.png"},
+        {"Wavebeam (Alternative Version)", ":/images/wavebeam_2.png"},
+        {"FCEUX NES Emulator's colorful NES", ":/images/fceux_colorful.png"},
+        {"Original NES Wii VC", ":/images/original_wii_vc.png"},
+        {"Restored NES Wii VC", ":/images/restored_wii_vc.png"},
+        {"Animal Crossing (GameCube) NES Emulator", ":/images/animal_crossing.png"},
+        {"Nintendo 3DS Virtual Console without dark enabled", ":/images/3ds_vc.png"},
+        {"NES Classic Mini", ":/images/nes_classic_mini.png"},
+        {"NES Remix U game series (Wii U) NES", ":/images/nes_remix.png"},
+        {"Original Mega Man NES", ":/images/original_megaman.png"},
+        {"Rockman 9 Modern NES", ":/images/rockman_9.png"},
+        {"Mega Man Legacy Collection (Nintendo 3DS) Modern NES", ":/images/megaman_legacy_collection.png"}
+    };
 private:
     static inline constexpr std::string_view HEX1 = "00600000426F6D426C69737300000000425921C80D5341540000000000000000";
     static inline constexpr std::string_view HEX2 = "BA7F0000426F6D426C69737300000000425921C80D5341540000000000000000";

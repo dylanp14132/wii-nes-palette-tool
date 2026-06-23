@@ -172,19 +172,6 @@
      <string>Color Palette</string>
     </property>
    </widget>
-   <widget class="QListWidget" name="temp1">
-    <property name="enabled">
-     <bool>false</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>120</y>
-      <width>251</width>
-      <height>192</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QLabel" name="oldPaletteLabel">
     <property name="enabled">
      <bool>false</bool>
@@ -202,25 +189,6 @@
     </property>
     <property name="alignment">
      <set>Qt::AlignmentFlag::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QListWidget" name="temp2">
-    <property name="enabled">
-     <bool>false</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>350</x>
-      <y>120</y>
-      <width>251</width>
-      <height>192</height>
-     </rect>
-    </property>
-    <property name="maximumSize">
-     <size>
-      <width>251</width>
-      <height>192</height>
-     </size>
     </property>
    </widget>
    <widget class="QLabel" name="newPaletteLabel">
@@ -255,8 +223,57 @@
      <string>Patch</string>
     </property>
    </widget>
+   <widget class="QLabel" name="originalImage">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>120</y>
+      <width>251</width>
+      <height>188</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Shape::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="images.qrc">:/images/original_wii_vc.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="wordWrap">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="newImage">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>120</y>
+      <width>251</width>
+      <height>188</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Shape::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="images.qrc">:/images/nestopia_yuv.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
  <connections/>
 </ui>

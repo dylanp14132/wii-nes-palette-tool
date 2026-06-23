@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/original_wii_vc.png</file>
+        <file>images/nestopia_rgb.png</file>
+        <file>images/nestopia_yuv.png</file>
+        <file>images/3ds_vc.png</file>
+        <file>images/animal_crossing.png</file>
+        <file>images/composite_direct.png</file>
+        <file>images/fceux_colorful.png</file>
+        <file>images/megaman_legacy_collection.png</file>
+        <file>images/nes_classic_mini.png</file>
+        <file>images/nes_remix.png</file>
+        <file>images/original_megaman.png</file>
+        <file>images/restored_wii_vc.png</file>
+        <file>images/rockman_9.png</file>
+        <file>images/wavebeam_1.png</file>
+        <file>images/wavebeam_2.png</file>
+    </qresource>
+</RCC>
