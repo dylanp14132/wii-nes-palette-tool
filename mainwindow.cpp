@@ -24,7 +24,7 @@ void MainWindow::on_fileSelectButton_clicked()
         this,
         "Select a File",
         "",
-        "Extracted WAD Files (*.app);;All Files (*.*)"
+        "Extracted WAD Files (00000001.app);;All Files (*.*)"
         );
 
     if (fileName.isEmpty())
@@ -38,7 +38,6 @@ void MainWindow::on_fileSelectButton_clicked()
 void MainWindow::on_fileText_editingFinished()
 {
     filePath = ui->fileText->text();
-    qDebug() << "Selected file:" << filePath;
 }
 
 
