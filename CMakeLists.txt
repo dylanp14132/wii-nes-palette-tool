@@ -10,12 +10,9 @@ qt_standard_project_setup()
 
 qt_add_executable(wii-nes-palette-tool
     WIN32 MACOSX_BUNDLE
-    main.cpp
-    mainwindow.cpp
-    mainwindow.h
-    mainwindow.ui
-    helper.h
-    helper.cpp
+    src/main.cpp
+    src/mainwindow.cpp include/mainwindow.h ui/mainwindow.ui
+    src/helper.cpp include/helper.h
     images.qrc
 )
 

@@ -1,6 +1,6 @@
-#include "mainwindow.h"
-#include "ui_mainwindow.h"
-#include "helper.h"
+#include "../include/mainwindow.h"
+#include "../ui/ui_mainwindow.h"
+#include "../include/helper.h"
 #include <QFileDialog>
 #include <QDebug>
 #include <QMessageBox>
