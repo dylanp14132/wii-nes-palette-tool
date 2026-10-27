@@ -1,9 +1,10 @@
-#include "../include/mainwindow.h"
-#include "../ui/ui_mainwindow.h"
-#include "../include/helper.h"
 #include <QFileDialog>
 #include <QDebug>
 #include <QMessageBox>
+
+#include "mainwindow.h"
+#include "helper.h"
+#include "../ui/ui_mainwindow.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -105,4 +106,3 @@ void MainWindow::on_paletteList_currentTextChanged(const QString &arg1)
         return;
     }
 }
-

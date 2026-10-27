@@ -1,5 +1,4 @@
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+#pragma once
 
 #include <QMainWindow>
 
@@ -28,4 +27,3 @@ private:
     QString filePath;
     QByteArray replacement;
 };
-#endif // MAINWINDOW_H

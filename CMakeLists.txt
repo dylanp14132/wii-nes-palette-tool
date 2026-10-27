@@ -1,12 +1,19 @@
 cmake_minimum_required(VERSION 3.19)
 project(wii-nes-palette-tool LANGUAGES CXX)
 
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTORCC ON)
+set(CMAKE_CXX_STANDARD 17)
 
 find_package(Qt6 6.5 REQUIRED COMPONENTS Core Widgets)
 
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+
 qt_standard_project_setup()
+
+include_directories(
+    src 
+    include
+)
 
 qt_add_executable(wii-nes-palette-tool
     WIN32 MACOSX_BUNDLE

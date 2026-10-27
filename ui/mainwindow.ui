@@ -242,7 +242,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="images.qrc">:/images/original_wii_vc.png</pixmap>
+     <pixmap resource="../images.qrc">:/images/original_wii_vc.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -267,7 +267,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="images.qrc">:/images/nestopia_yuv.png</pixmap>
+     <pixmap resource="../images.qrc">:/images/nestopia_yuv.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -276,7 +276,8 @@
   </widget>
  </widget>
  <resources>
-  <include location="images.qrc"/>
+  <include location="../images.qrc"/>
+  <include location="../images.qrc"/>
  </resources>
  <connections/>
 </ui>
