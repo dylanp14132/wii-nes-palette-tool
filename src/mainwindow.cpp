@@ -4,6 +4,7 @@
 
 #include "mainwindow.h"
 #include "helper.h"
+#include "hexCodes.h"
 #include "../ui/ui_mainwindow.h"
 
 MainWindow::MainWindow(QWidget *parent)
@@ -11,7 +12,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    replacement = QByteArray::fromHex("B18C80B188549C14AC0FB408B400A86098C08520814081218109800080008000D6B5897BA11FB89FD079D86FD8C4CD20B5A09E008640822681F1800080008000FFFFB2DFCA5FE1DFF9BFFDB9FE0EF664DEE0C760AF86A390A73BA52980008000FFFFE37FEB5FF73FFF1FFF1DFF38FB74F392E7B2DFD5DBD9DBBEDEF780008000");
+    replacement = QByteArray::fromHex(NESTOPIA_YUV_HEX);
 }
 
 MainWindow::~MainWindow()
