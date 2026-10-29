@@ -1,7 +1,5 @@
 #pragma once
 
-#include <string_view>
-
 #include <QByteArray>
 #include <QHash>
 
@@ -47,7 +45,4 @@ public:
         {"Rockman 9 Modern NES",                                    ":/images/rockman_9.png"},
         {"Mega Man Legacy Collection (Nintendo 3DS) Modern NES",    ":/images/megaman_legacy_collection.png"}
     };
-private:
-    static inline constexpr std::string_view HEX1 = SEARCH_HEX_1;
-    static inline constexpr std::string_view HEX2 = SEARCH_HEX_2;
 };

@@ -1,10 +1,12 @@
+#include <QByteArray>
+
 #include "helper.h"
 
 int Helper::getPalettePos (const QByteArray &data) {
-    int pos = data.indexOf(QByteArray::fromHex(HEX1.data()));
+    int pos = data.indexOf(QByteArray::fromHex(SEARCH_HEX_1));
 
     if (pos == -1)
-        pos = data.indexOf(QByteArray::fromHex(HEX2.data()));
+        pos = data.indexOf(QByteArray::fromHex(SEARCH_HEX_2));
 
     if (pos != -1)
         return pos + 32;
