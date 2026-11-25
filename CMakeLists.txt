@@ -11,15 +11,15 @@ set(CMAKE_AUTORCC ON)
 qt_standard_project_setup()
 
 include_directories(
-    src 
-    include
+    src/
+    include/
 )
 
 qt_add_executable(wii-nes-palette-tool
     WIN32 MACOSX_BUNDLE
     src/main.cpp
     src/mainwindow.cpp include/mainwindow.h ui/mainwindow.ui
-    src/helper.cpp include/helper.h
+    src/patcher.cpp include/patcher.h
     images.qrc
 )
 

@@ -1,9 +1,8 @@
 #include <QFileDialog>
 #include <QDebug>
 #include <QMessageBox>
-
 #include "mainwindow.h"
-#include "helper.h"
+#include "patcher.h"
 #include "hexCodes.h"
 #include "../ui/ui_mainwindow.h"
 

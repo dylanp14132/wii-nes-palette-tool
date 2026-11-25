@@ -1,6 +1,6 @@
 #include <QByteArray>
 
-#include "helper.h"
+#include "patcher.h"
 
 int Helper::getPalettePos (const QByteArray &data) {
     int pos = data.indexOf(QByteArray::fromHex(SEARCH_HEX_1));
