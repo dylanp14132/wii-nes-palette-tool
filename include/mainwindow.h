@@ -25,5 +25,4 @@ private slots:
 private:
     Ui::MainWindow *ui;
     QString filePath;
-    QByteArray replacement;
 };
