@@ -22,6 +22,8 @@ private slots:
     void on_patchButton_clicked();
     void on_paletteList_currentTextChanged(const QString &arg1);
 
+    void on_paletteList_currentIndexChanged(int index);
+
 private:
     Ui::MainWindow *ui;
     QString filePath;

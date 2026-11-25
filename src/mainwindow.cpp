@@ -1,3 +1,7 @@
+//---------------------------------------------------------------------------//
+// DEPENDENCIES
+//---------------------------------------------------------------------------//
+
 #include <QFileDialog>
 #include <QDebug>
 #include <QMessageBox>
@@ -5,6 +9,16 @@
 #include "patcher.h"
 #include "hexCodes.h"
 #include "../ui/ui_mainwindow.h"
+
+//---------------------------------------------------------------------------//
+// GLOBAL VARIABLES
+//---------------------------------------------------------------------------//
+
+Palette currentPalette = Palette::ORIGINAL_WII_VC;
+
+//---------------------------------------------------------------------------//
+// UI SETUP
+//---------------------------------------------------------------------------//
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -18,6 +32,10 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+//---------------------------------------------------------------------------//
+// UI INTERACTIONS
+//---------------------------------------------------------------------------//
 
 void MainWindow::on_fileSelectButton_clicked()
 {
@@ -59,12 +77,12 @@ void MainWindow::on_patchButton_clicked()
     }
 
     QByteArray data = file.readAll();
-    int pos = patcher::getPalettePos(data);
+    int pos = getPalettePos(data);
     file.close();
 
     if (pos != -1)
     {
-        data.replace(pos, 128, replacement);
+        data.replace(pos, 128, getPaletteHexCodes(currentPalette));
 
         if (!file.open(QIODevice::WriteOnly))
         {
@@ -85,24 +103,30 @@ void MainWindow::on_patchButton_clicked()
 
 void MainWindow::on_paletteList_currentTextChanged(const QString &arg1)
 {
-    auto it1 = patcher::palettes.find(arg1);
+    // auto it1 = palettes.find(arg1);
 
-    if (it1 != patcher::palettes.end()) {
-        replacement = *it1;
-    } else {
-        QMessageBox::critical(this, "Uh oh... This shouldn't happen", "Unknown palette: " + arg1);
-        return;
-    }
+    // if (it1 != palettes.end()) {
+    //     replacement = *it1;
+    // } else {
+    //     QMessageBox::critical(this, "Uh oh... This shouldn't happen", "Unknown palette: " + arg1);
+    //     return;
+    // }
 
-    auto it2 = patcher::images.find(arg1);
+    // auto it2 = images.find(arg1);
 
-    if (it2 != patcher::images.end()) {
-        QPixmap p(*it2);
-        ui->newImage->setPixmap(p);
-    } else {
-        QPixmap p(":/images/original_wii_vc.png");
-        ui->newImage->setPixmap(p);
-        QMessageBox::critical(this, "Uh oh... This shouldn't happen", "No palette image: " + arg1);
-        return;
-    }
+    // if (it2 != images.end()) {
+    //     QPixmap p(*it2);
+    //     ui->newImage->setPixmap(p);
+    // } else {
+    //     QPixmap p(":/images/original_wii_vc.png");
+    //     ui->newImage->setPixmap(p);
+    //     QMessageBox::critical(this, "Uh oh... This shouldn't happen", "No palette image: " + arg1);
+    //     return;
+    // }
 }
+
+void MainWindow::on_paletteList_currentIndexChanged(int index)
+{
+    currentPalette = static_cast<Palette>(index); // Ensure that the indexes on the Palette enum match on the ui
+}
+
