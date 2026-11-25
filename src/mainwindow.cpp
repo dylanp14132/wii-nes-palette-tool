@@ -59,7 +59,7 @@ void MainWindow::on_patchButton_clicked()
     }
 
     QByteArray data = file.readAll();
-    int pos = Helper::getPalettePos(data);
+    int pos = patcher::getPalettePos(data);
     file.close();
 
     if (pos != -1)
@@ -85,18 +85,18 @@ void MainWindow::on_patchButton_clicked()
 
 void MainWindow::on_paletteList_currentTextChanged(const QString &arg1)
 {
-    auto it1 = Helper::palettes.find(arg1);
+    auto it1 = patcher::palettes.find(arg1);
 
-    if (it1 != Helper::palettes.end()) {
+    if (it1 != patcher::palettes.end()) {
         replacement = *it1;
     } else {
         QMessageBox::critical(this, "Uh oh... This shouldn't happen", "Unknown palette: " + arg1);
         return;
     }
 
-    auto it2 = Helper::images.find(arg1);
+    auto it2 = patcher::images.find(arg1);
 
-    if (it2 != Helper::images.end()) {
+    if (it2 != patcher::images.end()) {
         QPixmap p(*it2);
         ui->newImage->setPixmap(p);
     } else {

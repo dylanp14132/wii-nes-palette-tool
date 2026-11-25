@@ -2,13 +2,10 @@
 
 #include <QByteArray>
 #include <QHash>
-
 #include "hexCodes.h"
 
-class Helper {
-public:
-    Helper() = delete;
-    static int getPalettePos (const QByteArray &data);
+namespace patcher {
+    int getPalettePos(const QByteArray &data);
 
     static inline const QHash<QString, QByteArray> palettes = {
         {"Nestopia Emulator's YUV",                                 QByteArray::fromHex(NESTOPIA_YUV_HEX)},
@@ -45,4 +42,4 @@ public:
         {"Rockman 9 Modern NES",                                    ":/images/rockman_9.png"},
         {"Mega Man Legacy Collection (Nintendo 3DS) Modern NES",    ":/images/megaman_legacy_collection.png"}
     };
-};
+}

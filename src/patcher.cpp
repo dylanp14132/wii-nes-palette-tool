@@ -1,8 +1,7 @@
 #include <QByteArray>
-
 #include "patcher.h"
 
-int Helper::getPalettePos (const QByteArray &data) {
+int patcher::getPalettePos (const QByteArray &data) {
     int pos = data.indexOf(QByteArray::fromHex(SEARCH_HEX_1));
 
     if (pos == -1)
